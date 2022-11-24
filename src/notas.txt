@@ -1,0 +1,165 @@
+1
+Good Will Hunting (1997)
+póster
+https://www.themoviedb.org/t/p/original/bABCBKYBK7A5G1x0FzoeoNfuj2.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/bpV8wn48s82au37QyUJ51S7X2Vf.jpg
+
+--------
+2
+Black Adam (2022)
+póster
+https://www.themoviedb.org/t/p/original/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg
+
+--------
+3
+Black Panther: Wakanda Forever (2022)
+póster
+https://www.themoviedb.org/t/p/original/sv1xJUazXeYqALzczSZ3O6nkH75.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg
+
+--------
+4
+Smile (2022)
+póster
+https://www.themoviedb.org/t/p/original/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/olPXihyFeeNvnaD6IOBltgIV1FU.jpg
+
+--------
+5
+Sniper: The White Raven (2022)
+póster
+https://www.themoviedb.org/t/p/original/lZOODJzwuQo0etJJyBBZJOSdZcW.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/bZ6hEHRoOB5wGkRm9P8AchduODu.jpg
+
+--------
+6
+All Quiet on the Western Front (2022)
+póster
+https://www.themoviedb.org/t/p/original/hYqOjJ7Gh1fbqXrxlIao1g8ZehF.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/mqsPyyeDCBAghXyjbw4TfEYwljw.jpg
+
+--------
+7
+Orphan: First Kill (2022)
+póster
+https://www.themoviedb.org/t/p/original/pHkKbIRoCe7zIFvqan9LFSaQAde.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/5GA3vV1aWWHTSDO5eno8V5zDo8r.jpg
+
+--------
+8
+Halloween Ends (2022)
+póster
+https://www.themoviedb.org/t/p/original/yoAKHpveZ4Z1wwwXoD31dXj3H8s.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/1UlTowc5vfrgXUVT6OnlU0TOiij.jpg
+
+--------
+9
+The Bad Guys (2022)
+póster
+https://www.themoviedb.org/t/p/original/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/9IDJpHROaC0S1ZlIxrvzOcOX5yC.jpg
+
+--------
+10
+The Silent Twins (2022)
+póster
+https://www.themoviedb.org/t/p/original/wjO3QS3mD2t8F5u5nIbzQ1ov8dN.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/wxPzRa4mxe6zNgJgi9ZZlbhWco.jpg
+
+--------
+11
+The Woman King (2022)
+póster
+https://www.themoviedb.org/t/p/original/438QXt1E3WJWb3PqNniK0tAE5c1.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/7zQJYV02yehWrQN6NjKsBorqUUS.jpg
+
+--------
+12
+Virus:32 (2022)
+póster
+https://www.themoviedb.org/t/p/original/wZiF79hbhLK1U2Pj9bF67NAKXQR.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/i0zbSmiyyylh7H3Qb4jgscz46Pm.jpg
+
+--------
+13
+Chickenhare and the Hamster of Darkness (2022)
+póster
+https://www.themoviedb.org/t/p/original/2v6f1EqTo4FUxVT9MDXpF6158AX.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/sahdgvn0Brw6AgdwyLHgdCAynWG.jpg
+
+--------
+14
+The Godfather (1972)
+póster
+https://www.themoviedb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg
+
+--------
+15
+Your Name. (2016)
+póster
+https://www.themoviedb.org/t/p/original/q719jXXEzOoYaps6babgKnONONX.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg
+
+--------
+16
+Parasite (2019)
+póster
+https://www.themoviedb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg
+
+--------
+16
+GoodFellas (1990)
+póster
+https://www.themoviedb.org/t/p/original/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg
+
+banner
+https://www.themoviedb.org/t/p/original/sw7mordbZxgITU877yTpZCud90M.jpg
+
+
+
+
+
+fondo
+bg-stone-900
+
+
+text white
+text-white
+
+text gray
+text-gray-400
