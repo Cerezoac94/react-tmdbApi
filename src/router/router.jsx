@@ -10,11 +10,11 @@ import PopularContainer from "../components/main/moviesByFilter/PopularContainer
 import NewestContainer from "../components/main/moviesByFilter/NewestContainer"
 import TopRatedContainer from "../components/main/moviesByFilter/TopRatedContainer"
 import MovieContainer from "../components/main/movieDetail/MovieContainer"
-import GenreContainer from "../components/main/moviesByFilter/GenreContainer"
 import FavoritesList from "../components/main/favorites/FavoritesList"
 import Profile from "../components/main/Profile"
 import Signup from "../components/forms/Signup"
 import Login from "../components/forms/Login"
+import NowPlayingContainer from "../components/main/moviesByFilter/NowPlayingContainer"
 
 const router = createBrowserRouter(
     [
@@ -61,7 +61,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "/movies/:genre",
-                    element: <GenreContainer/>
+                    element: "<genreContainer/>"
                 },
                 {
                     path: "/movie/:id",
@@ -74,6 +74,10 @@ const router = createBrowserRouter(
                 {
                     path: "/profile",
                     element: <Profile/>
+                },
+                {
+                    path: "/nowp",
+                    element: <NowPlayingContainer/>
                 }
             ]
         },

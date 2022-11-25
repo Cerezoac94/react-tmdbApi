@@ -5,11 +5,11 @@ import Footer from "./components/footer/Footer"
 function App() {
 
   return (
-    <div className="bg-stone-900 h-screen">
+    <>
       <Header/>
       <Main/>
       <Footer/>
-    </div>
+    </>
   )
 }
 
