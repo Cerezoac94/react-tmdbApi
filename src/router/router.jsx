@@ -1,20 +1,20 @@
 import {createBrowserRouter} from "react-router-dom"
 import App from "../App"
-import Home from "../components/main/home/Home"
+import ViewHome from "../components/main/home/ViewHome"
 import About from "../components/main/company/About"
 import ContactUs from "../components/main/company/ContactUs"
 import Support from "../components/main/company/Support"
 import TermsOfUse from "../components/main/company/TermsOfUse"
 import PrivacyPolicy from "../components/main/company/PrivacyPolicy"
-import PopularContainer from "../components/main/moviesByFilter/PopularContainer"
-import NewestContainer from "../components/main/moviesByFilter/NewestContainer"
-import TopRatedContainer from "../components/main/moviesByFilter/TopRatedContainer"
 import MovieContainer from "../components/main/movieDetail/MovieContainer"
 import FavoritesList from "../components/main/favorites/FavoritesList"
 import Profile from "../components/main/Profile"
 import Signup from "../components/forms/Signup"
 import Login from "../components/forms/Login"
 import NowPlayingContainer from "../components/main/moviesByFilter/NowPlayingContainer"
+import ViewPopular from "../components/main/moviesByFilter/ViewPopular"
+import ViewNewest from "../components/main/moviesByFilter/ViewNewest"
+import ViewTopRated from "../components/main/moviesByFilter/ViewTopRated"
 
 const router = createBrowserRouter(
     [
@@ -25,7 +25,7 @@ const router = createBrowserRouter(
             children: [
                 {
                     path: "/",
-                    element: <Home/> 
+                    element: <ViewHome/> 
                 },
                 {
                     path: "/about",
@@ -49,15 +49,15 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "/movies",
-                    element: <PopularContainer/>
+                    element: <ViewPopular/>
                 },
                 {
                     path: "/movies/newest",
-                    element: <NewestContainer/>
+                    element: <ViewNewest/>
                 },
                 {
                     path: "/movies/top-rated",
-                    element: <TopRatedContainer/>
+                    element: <ViewTopRated/>
                 },
                 {
                     path: "/movies/:genre",

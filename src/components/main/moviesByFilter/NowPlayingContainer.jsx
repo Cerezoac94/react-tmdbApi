@@ -1,6 +1,6 @@
 import React, {useState, useEffect}from 'react'
 import axios from "axios"
-import NowPlayingList from "./NowPlayingList"
+import NowPlaying from "./NowPlaying"
 
 const NowPlayingContainer = () => {
     const [nowPlaying, setNowPlaying] = useState([])
@@ -14,7 +14,7 @@ const NowPlayingContainer = () => {
 
 
   return (
-    <NowPlayingList movies={nowPlaying}/>
+    <NowPlaying movies={nowPlaying}/>
   )
 }
 

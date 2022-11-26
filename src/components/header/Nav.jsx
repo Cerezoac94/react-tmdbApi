@@ -9,6 +9,7 @@ const NavStyled = styled.nav`
   transition: left 700ms ease;
   width: 20rem;
   background-color: #1e1e1e;
+  z-index: 1;
   @media (min-width: 720px) {
     position: static;
     width: initial;
@@ -20,13 +21,16 @@ const LinkStyled = styled(Link)`
   display: inline-block;
   width: 100%;
   text-align: left;
-  color: #e10000;
+  color: #BABABA;
   font-size: 1.5rem;
   margin: 1rem 1rem;
   text-decoration: none;
   @media (min-width: 720px) {
     width: initial;
     margin: 0 10px;
+  }
+  :hover{
+    color: #ffffff;
   }
 `;
 
