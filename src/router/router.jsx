@@ -11,10 +11,11 @@ import FavoritesList from "../components/main/favorites/FavoritesList"
 import Profile from "../components/main/Profile"
 import Signup from "../components/forms/Signup"
 import Login from "../components/forms/Login"
-import NowPlayingContainer from "../components/main/moviesByFilter/NowPlayingContainer"
 import ViewPopular from "../components/main/moviesByFilter/ViewPopular"
 import ViewNewest from "../components/main/moviesByFilter/ViewNewest"
 import ViewTopRated from "../components/main/moviesByFilter/ViewTopRated"
+import Logout from "../components/main/Logout"
+import ViewGenres from "../components/main/moviesByFilter/ViewGenres"
 
 const router = createBrowserRouter(
     [
@@ -48,7 +49,7 @@ const router = createBrowserRouter(
                     element: <PrivacyPolicy/>
                 },
                 {
-                    path: "/movies",
+                    path: "/movies/popular",
                     element: <ViewPopular/>
                 },
                 {
@@ -60,8 +61,8 @@ const router = createBrowserRouter(
                     element: <ViewTopRated/>
                 },
                 {
-                    path: "/movies/:genre",
-                    element: "<genreContainer/>"
+                    path: "/movies/genre/:genre",
+                    element: <ViewGenres/>
                 },
                 {
                     path: "/movie/:id",
@@ -76,8 +77,8 @@ const router = createBrowserRouter(
                     element: <Profile/>
                 },
                 {
-                    path: "/nowp",
-                    element: <NowPlayingContainer/>
+                    path: "/logout",
+                    element: <Logout/>
                 }
             ]
         },

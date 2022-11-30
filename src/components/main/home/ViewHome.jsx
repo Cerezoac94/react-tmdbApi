@@ -1,9 +1,22 @@
 import React from 'react'
+import styled from 'styled-components'
+import NewestHomeContainer from './NewestHomeContainer'
+import PopularHomeContainer from './PopularHomeContainer'
+import TopRatedHomeContainer from './TopRatedHomeContainer'
+
+const Container = styled.div`
+
+`
+
 
 const Home = () => {
   
   return (
-    <section>HOME</section>
+    <Container>
+    <PopularHomeContainer/>
+    <NewestHomeContainer/>
+    <TopRatedHomeContainer/>
+    </Container>
   )
 }
 

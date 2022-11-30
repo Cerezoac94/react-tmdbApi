@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Button from "../elements/Button";
-
+import { userContext } from "../../Context/UserContext";
 import Nav from "./Nav";
 
 const HeaderStyled = styled.header`
@@ -10,7 +10,7 @@ const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 0 10px;
+  padding: 0 1rem;
   min-height: 10vh;
   
   div{
@@ -33,6 +33,7 @@ const Menu = styled.span`
 
 
   const LinkStyled = styled(Link)`
+ 
   display: flex;
   align-items: center;
   width: 100%;
@@ -44,6 +45,7 @@ const Menu = styled.span`
 `;
 
 const Header = () => {
+  const {user} = useContext(userContext)
   const [click, setClick] = useState(false);
   const clicked = () => {
     setClick(!click);
@@ -55,10 +57,10 @@ const Header = () => {
       <LinkStyled to="/"><ion-icon name="videocam-outline"></ion-icon>ACDMDb</LinkStyled> 
       </div>
       <Nav click={click} clicked={clicked}/>
-      <div>
-      <Button name="Log In"/>
-      <Button name="Sign Up"  primary="true"/>
-      </div>
+      {!user && <div>
+      <LinkStyled to="/login"><Button name="Log In"/></LinkStyled>
+      <LinkStyled to="/signup"><Button name="Sign Up"  primary="true"/></LinkStyled>
+      </div>}
     </HeaderStyled>
   );
 };

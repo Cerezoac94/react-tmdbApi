@@ -1,6 +1,7 @@
 import React from "react";
 import genreContainer from "./genreContainer";
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 
 const SectionStyled = styled.section`
 display: flex;
@@ -43,7 +44,9 @@ font-size: 1.2rem;
 color: #BABABA;
 margin: 1rem 1rem 2rem 0;
 }
-
+.genres {
+  margin: 2rem 1rem 0 0;
+}
 span{
   background-color: #D9251D;
   color: white;
@@ -55,7 +58,6 @@ span{
     @media (min-width: 720px) {
       padding: .5rem .8rem;
       font-size: 1.3rem;
-      margin: 2rem 1rem 0 0;
   }
 }
 
@@ -76,14 +78,16 @@ h4,p{
 const Movies = ({ movie }) => {
 
 	return (
+    
 		<SectionStyled>
-			
+			<Link to={`/movie/${movie.id}`}>
 				<img
 					src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
 					alt={movie.title}
 				/>
-			
+			 </Link>
       <section>
+      <Link to={`/movie/${movie.id}`}>
         <h2>{movie.title}</h2>
         <div>
         <label><ion-icon name="star-half-outline"></ion-icon>{movie.vote_average * 10}</label>
@@ -92,13 +96,18 @@ const Movies = ({ movie }) => {
 
         <h4>OVERVIEW</h4>
         <p>{movie.overview}</p>
+        </Link>
         <div>
         {movie.genre_ids.map((genre, key) => (
-          <span key={key}>{(genreContainer[genreContainer.findIndex(p => p.id === genre)].name)}</span>
+          <div className="genres"  key={key}>
+          <Link to={`/movies/genre/${genre}`} >
+          <span>{(genreContainer[genreContainer.findIndex(p => p.id === genre)].name)}</span></Link>
+          </div>
         ))}
         </div>
       </section>
 		</SectionStyled>
+   
 	);
 };
 

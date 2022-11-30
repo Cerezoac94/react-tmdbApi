@@ -1,16 +1,20 @@
-import React  from "react";
+import React,{useContext} from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { userContext } from "../../Context/UserContext";
+
 
 const NavStyled = styled.nav`
   position: absolute;
   top: 10vh;
   left: ${(props) => (props.show ? "0" : "-50rem")};
+  padding-left: 1.5rem;
   transition: left 700ms ease;
   width: 20rem;
   background-color: #1e1e1e;
   z-index: 1;
   @media (min-width: 720px) {
+    padding: 0;
     position: static;
     width: initial;
     background-color: transparent;
@@ -35,13 +39,15 @@ const LinkStyled = styled(Link)`
 `;
 
 const Nav = ({ click, clicked }) => {
+  const {user}=useContext(userContext)
   return (
     <NavStyled show={click} onClick={clicked}>
-      <LinkStyled to="/movies">Movies</LinkStyled>
+      <LinkStyled to="/movies/popular">Movies</LinkStyled>
       <LinkStyled to="/genders">Genres</LinkStyled> {/*Esto mostrara una lista de generos, posterior a esto, el genero seleccionado mostrará la vista de peliculas de ese genero, similar a ver un detalle de pelicula */}
-      <LinkStyled to="/movies/favorite">Favorites</LinkStyled>
-      <LinkStyled to="/contact-us">Contact Us</LinkStyled>
+      {user && <LinkStyled to="/movies/favorite">Favorites</LinkStyled>}
       
+      <LinkStyled to="/contact-us">Contact Us</LinkStyled>
+      {user && <LinkStyled to="/logout">Log Out</LinkStyled>}
     </NavStyled>
   )
 };
