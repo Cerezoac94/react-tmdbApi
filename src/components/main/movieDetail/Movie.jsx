@@ -163,15 +163,28 @@ const SectionStyled = styled.section`
 `;
 
 const Movie = ({ movie }) => {
-	// const [click, setClick] = useState(false);
-  const {addToFav, click} = useContext(favContext);
-  console.log(click)
+  const {addToFav,fav } = useContext(favContext);
+  const [isFav, setIsFav] = useState(false);
+//   console.log(fav);
+  // let ifFav = fav.findIndex(f => f.id === movie.id)}
 	const clicked = () => {
-   addToFav({...movie})
+    // if(ifFav >= 0) {
+      
+    //   addToFav({...movie})
+    // }else{
+    //   setIsFav(!isFav)
+    // }
+
+    setIsFav(!isFav)
 	};
 	useEffect(() => {
-   
-  }, [click]);
+       isFav && addToFav({...movie, isFav})
+        // if(fav.some((f => f.isFav === true))){
+        //   setIsFav(true)
+        // }else{
+        //   setIsFav(false)
+        // }
+  }, [isFav]);
 
 	return (
 		<SectionStyled>
@@ -197,7 +210,7 @@ const Movie = ({ movie }) => {
 							<label className="clasification">
 								{movie?.releases?.countries[0]?.certification}
 							</label>
-							<label>{movie?.release_date?.slice(0, 4)}</label>
+							<label>{movie?.release_date}</label>
 						</div>
 
 						<div className="genres">
@@ -205,17 +218,10 @@ const Movie = ({ movie }) => {
 								<span key={key}>{e.name}</span>
 							))}
 						</div>
-						{/* <span className="filled">
-							<ion-icon name="heart"></ion-icon>
-						</span> */}
 						<span onClick={clicked} className="outline">
-							<ion-icon name={click ? "heart" : "heart-outline"}></ion-icon>
+							<ion-icon name={isFav ? "heart" : "heart-outline"}></ion-icon>
 						</span>
 					</div>
-
-					{/* <div className="rating">
-						<label>{`${movie?.vote_average * 10}`}</label>
-					</div> */}
 					<div className="rating">
 						<CircularProgressbar
 							value={`${movie?.vote_average * 10}`}

@@ -28,6 +28,7 @@ const Menu = styled.span`
   ion-icon {
   font-size: 3rem;
 }
+
   `
   ;
 
@@ -42,6 +43,12 @@ const Menu = styled.span`
   font-size: 1.8rem;
   margin: 1rem 1rem;
   text-decoration:none;
+
+  img{ width: 12rem;
+    @media (min-width: 720px) {
+    width: 17rem;
+  }
+  }
 `;
 
 const Header = () => {
@@ -54,12 +61,15 @@ const Header = () => {
     <HeaderStyled>
       <div>
       <Menu onClick={clicked}><ion-icon name={click ? 'close':'menu'}></ion-icon></Menu>
-      <LinkStyled to="/"><ion-icon name="videocam-outline"></ion-icon>ACDMDb</LinkStyled> 
+      <LinkStyled to="/"><img src="../../../public/Logo.png" alt="Logo" /></LinkStyled> 
       </div>
       <Nav click={click} clicked={clicked}/>
       {!user && <div>
       <LinkStyled to="/login"><Button name="Log In"/></LinkStyled>
       <LinkStyled to="/signup"><Button name="Sign Up"  primary="true"/></LinkStyled>
+      </div>}
+      {user && <div>
+      <LinkStyled to="/logout">Log Out</LinkStyled>
       </div>}
     </HeaderStyled>
   );

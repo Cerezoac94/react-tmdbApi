@@ -7,7 +7,6 @@ import Support from "../components/main/company/Support"
 import TermsOfUse from "../components/main/company/TermsOfUse"
 import PrivacyPolicy from "../components/main/company/PrivacyPolicy"
 import MovieContainer from "../components/main/movieDetail/MovieContainer"
-import FavoritesList from "../components/main/favorites/FavoritesList"
 import Profile from "../components/main/Profile"
 import Signup from "../components/forms/Signup"
 import Login from "../components/forms/Login"
@@ -16,6 +15,7 @@ import ViewNewest from "../components/main/moviesByFilter/ViewNewest"
 import ViewTopRated from "../components/main/moviesByFilter/ViewTopRated"
 import Logout from "../components/main/Logout"
 import ViewGenres from "../components/main/moviesByFilter/ViewGenres"
+import ViewFavorites from "../components/main/favorites/ViewFavorites"
 
 const router = createBrowserRouter(
     [
@@ -70,7 +70,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "/movies/favorite",
-                    element: <FavoritesList/>
+                    element: <ViewFavorites/>
                 },
                 {
                     path: "/profile",

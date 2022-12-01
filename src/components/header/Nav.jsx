@@ -12,7 +12,7 @@ const NavStyled = styled.nav`
   transition: left 700ms ease;
   width: 20rem;
   background-color: #1e1e1e;
-  z-index: 1;
+  z-index: 2;
   @media (min-width: 720px) {
     padding: 0;
     position: static;
@@ -42,12 +42,13 @@ const Nav = ({ click, clicked }) => {
   const {user}=useContext(userContext)
   return (
     <NavStyled show={click} onClick={clicked}>
-      <LinkStyled to="/movies/popular">Movies</LinkStyled>
+      <LinkStyled to="/movies/popular">Popular</LinkStyled>
+      <LinkStyled to="/movies/Newest">Newest</LinkStyled>
+      <LinkStyled to="/movies/top-rated">Top Rated</LinkStyled>
       <LinkStyled to="/genders">Genres</LinkStyled> {/*Esto mostrara una lista de generos, posterior a esto, el genero seleccionado mostrará la vista de peliculas de ese genero, similar a ver un detalle de pelicula */}
       {user && <LinkStyled to="/movies/favorite">Favorites</LinkStyled>}
       
-      <LinkStyled to="/contact-us">Contact Us</LinkStyled>
-      {user && <LinkStyled to="/logout">Log Out</LinkStyled>}
+      
     </NavStyled>
   )
 };

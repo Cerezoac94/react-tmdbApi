@@ -8,6 +8,7 @@ const MovieContainer = () => {
   const {id}  = useParams();
   const [movie, setMovie] = useState({});
   useEffect(() => {
+    // comprobar favorito si es favorito
     axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${apikey}&append_to_response=releases&language=en-US`)
     .then(res=>setMovie(res.data))
   }, []);

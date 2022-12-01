@@ -12,6 +12,7 @@ function App() {
     <UserContext>
     <ScrollRestoration />
     <FavContext>
+      
       <Header/>
       <Main/>
       <Footer/>

@@ -6,24 +6,26 @@ const { Provider } = favContext;
 
 const FavContext = ({children}) => {
     const [fav, setFav] = useState([])
-    const [click, setClick] = useState(false)
+    // const [isFav, setIsFav] = useState(false);
 
     const addToFav = (movie) => {
       let favCopy = JSON.parse(JSON.stringify(fav))
       let ifMovie = favCopy.findIndex(m => m.id === movie.id)
       if (ifMovie >= 0) {
         favCopy.splice(ifMovie,1)
-        setClick(false)
+        // setIsFav(false)
       }else{
         favCopy.push(movie)
-        setClick(true)
+        // setIsFav(!isFav)
       }
       setFav(favCopy);
     };
+
+    
     const favData = {
       fav,
       addToFav,
-      click
+      // isFav
 
     };
   return <Provider value={favData}>{children}</Provider>

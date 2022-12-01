@@ -1,6 +1,7 @@
 import React from "react";
 import genreContainer from "./genreContainer";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const SectionStyled = styled.section`
 	display: flex;
@@ -10,24 +11,27 @@ const SectionStyled = styled.section`
 	border-radius: 1rem;
 	@media (min-width: 720px) {
 		flex-direction: column;
-
+		width: 24rem;
 		height: calc(100vh - 2vh);
 	}
-	/* @media (min-width: 920px) {
-		
-	} */
+	@media (min-width: 980px) {
+		width: 30rem;
+	} 
+	@media (min-width: 1880px) {
+			width: 100%;
+	}
 
 	img {
 		width: 70%;
 		margin-right: 1rem;
 		@media (min-width: 720px) {
-			width: 6rem;
+			width: 9.5em;
 		}
-		@media (min-width: 800px) {
-			width: 7rem;
-		}
-		@media (min-width: 950px) {
+		@media (min-width: 980px) {
 			width: 8.5rem;
+		}
+		@media (min-width: 1180px) {
+			width: 30%;
 		}
 	}
 
@@ -55,6 +59,9 @@ const SectionStyled = styled.section`
 			writing-mode: horizontal-tb;
 			transform: rotate(0);
 		}
+		@media (min-width: 1880px) {
+			font-size: 4rem;
+	}
 	}
 	h3 {
 		font-size: 0.8rem;
@@ -67,6 +74,9 @@ const SectionStyled = styled.section`
 			font-size: 1.5rem;
 			background-color: transparent;
 		}
+		@media (min-width: 1880px) {
+			font-size: 3rem;
+	}
 	}
 
 	label,
@@ -74,6 +84,9 @@ const SectionStyled = styled.section`
 		font-size: 1rem;
 		color: #bababa;
 		margin: 1rem 1rem 2rem 0;
+		@media (min-width: 1880px) {
+			font-size: 2rem;
+	}
 	}
 	span {
 		background-color: #d9251d;
@@ -88,11 +101,17 @@ const SectionStyled = styled.section`
 		}
 		@media (min-width: 800px) {
 			margin: .8rem 0.5rem 0 0;
+			
 		}
 		@media (min-width: 950px) {
 			margin: 2rem 0.5rem 0 0;
 		}
+		@media (min-width: 1880px) {
+			padding: 0.6rem 1rem;
+			font-size: 1.8rem;
+		}
 	}
+	
 `;
 
 const Content = styled.div`
@@ -103,6 +122,11 @@ const Content = styled.div`
 		margin-bottom: 1rem;
 	}
 `;
+
+const LinkStyled = styled(Link)`
+text-decoration: none;
+color: var(--colorWhite);
+`
 
 // const ImgStyled = styled.img`
 // 	width: 7.6rem;
@@ -115,7 +139,8 @@ const NowPlaying = ({ movies }) => {
 			<h2>Latest</h2>
 
 			{movies.map((movie, key) => (
-				<Content key={key}>
+				<LinkStyled to={`/movie/${movie.id}`} key={key}>
+				<Content >
 					<img
 						src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
 						alt={movie.title}
@@ -139,6 +164,7 @@ const NowPlaying = ({ movies }) => {
 						</div>
 					</section>
 				</Content>
+				</LinkStyled>
 			))}
 		</SectionStyled>
 	);
