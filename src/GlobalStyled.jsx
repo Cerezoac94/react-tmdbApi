@@ -5,6 +5,7 @@ const GlobalStyled = createGlobalStyle`
     --backgroundColor: #1e1e1e;
     --colorWhite: white;
     --colorGray: #BABABA;
+    --colorRed: #D9251D;
 }
 
 *{
@@ -23,6 +24,9 @@ body, #root{
     height: 100vh;
     color: var(--colorWhite);
     font-family: 'DM Sans', sans-serif;
+}
+body{
+    position: relative;
 }
 `;
 export default GlobalStyled;

@@ -5,78 +5,110 @@ import { favContext } from "../../../Context/FavContext";
 
 const SectionStyled = styled.section`
 	position: relative;
-	display: flex;
-	justify-content: center;
-	/* background-color: #563001; */
 	width: 100%;
 	height: 90vh;
+	display: flex;
+	justify-content: center;
+	
 
 	.backContainer {
 		position: absolute;
 		opacity: 0.3;
 		width: 100%;
 		height: 100%;
-		/* background-color: antiquewhite; */
 	}
 	.backContainer img {
 		width: 100%;
 		height: 100%;
-		background-size: cover;
+		object-fit: cover;
 	}
 
 	.poster {
+		display: flex;
+    justify-content: center;
+		width: 80%;
+		@media (min-width: 720px) {
 		width: 40%;
-    margin-right: 1rem;
+		margin: 0 1rem 0 2rem;
+		}
 	}
-	.poster img {
-    width: 100%;
-    @media (min-width: 720px) {
-      		width: 80%;
 
-    }
+	.poster::after{
+		content: "";
+		height: 100%;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		position: absolute;
+		border-radius: 0.5rem;
+		background-image:linear-gradient(to bottom,rgb(50,50,50, .1),rgb(0,0,0)); 
+		@media (min-width: 720px) {
+			position: static;
+			content: none;
+			
+		}
+	}
+
+
+	.poster img {
+		width: 100%;
+		object-fit: cover;
+
+		@media (min-width: 580px) {
+			width: 40rem;
+		}
+
+		@media (min-width: 710px) {
+			width: 80%;
+		}
 		/* height: 90%; */
 	}
 
 	.info {
-    
+		position: relative;
 		z-index: 1;
 		width: 100%;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-    justify-content: center;
-		/* background-color: transparent; */
+		justify-content: center;
+		@media (min-width: 720px) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
 	}
 	.info article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-		width: 50%;
-		height: 85%;
-    @media (min-width: 720px) {
-      width: 60%;
-		height: 85%;
-    }
-		/* display: flex;
+		position: absolute;
+		display: flex;
 		flex-direction: column;
-		justify-content: space-between; */
-		/* align-content: space-between; */
+		justify-content: flex-end;
+		width: 70%;
+		height: 85%;
+		@media (min-width: 580px) {
+			width: 38rem;
+		}
+		@media (min-width: 720px) {
+			justify-content: center;
+			position: static;
+			width: 60%;
+			height: 85%;
+		}
 	}
 
 	h2 {
-    font-size: 2.5rem;
-    @media (min-width: 720px) {
-      font-size: 4rem;
-    }
-		
+		font-size: 2.5rem;
+		@media (min-width: 720px) {
+			font-size: 4rem;
+		}
 	}
 	h3 {
-    font-size: .8rem;
-    color: #bababa;
-    @media (min-width: 720px) {
-      font-size: 1.5rem;
-    }
-		
-		
+		font-size: 0.9rem;
+		color: #bababa;
+		@media (min-width: 720px) {
+			font-size: 1.5rem;
+		}
 	}
 
 	.releases {
@@ -85,11 +117,12 @@ const SectionStyled = styled.section`
 		justify-content: space-between;
 		flex-wrap: wrap;
 		align-items: center;
-		margin: 2rem 2rem 2rem 0;
+		
 		font-size: 1rem;
 		@media (min-width: 720px) {
 			width: 95%;
 			font-size: 1.2rem;
+			margin: 2rem 2rem 2rem 0;
 		}
 		@media (min-width: 920px) {
 			width: 85%;
@@ -103,12 +136,13 @@ const SectionStyled = styled.section`
 		align-items: center;
 	}
 	.clasification {
+		
 		padding: 0.3rem;
 		border: 1px solid #bababa;
 		border-radius: 3px;
 		color: #bababa;
-		margin-right: 1rem;
-	}
+		margin-right: 1rem;}
+	
 
 	.genres {
 		margin: 1rem;
@@ -121,24 +155,22 @@ const SectionStyled = styled.section`
 		margin: 3rem;
 	} */
 	.rating {
-		display: flex;
-		align-items: center;
 		width: 4rem;
-		margin-bottom: 2rem;
-		/* background-color: red; */
-    @media (min-width: 720px) {
-      width: 5rem;
-    }
+		margin: 0 auto;
+		@media (min-width: 720px) {
+			width: 5rem;
+			margin: initial;
+			margin-bottom: 2rem;
+		}
 	}
 
-  h4,p{
-    font-size: .8rem;
-    @media (min-width: 720px) {
-    font-size: 1.5rem;
-  }
-  }
-
-
+	h4,
+	p {
+		font-size: 1rem;
+		@media (min-width: 720px) {
+			font-size: 1.5rem;
+		}
+	}
 
 	.CircularProgressbar {
 		width: 100%;
@@ -163,28 +195,28 @@ const SectionStyled = styled.section`
 `;
 
 const Movie = ({ movie }) => {
-  const {addToFav,fav } = useContext(favContext);
-  const [isFav, setIsFav] = useState(false);
-//   console.log(fav);
-  // let ifFav = fav.findIndex(f => f.id === movie.id)}
+	const { addToFav, fav } = useContext(favContext);
+	const [isFav, setIsFav] = useState(false);
+	//   console.log(fav);
+	// let ifFav = fav.findIndex(f => f.id === movie.id)}
 	const clicked = () => {
-    // if(ifFav >= 0) {
-      
-    //   addToFav({...movie})
-    // }else{
-    //   setIsFav(!isFav)
-    // }
+		// if(ifFav >= 0) {
 
-    setIsFav(!isFav)
+		//   addToFav({...movie})
+		// }else{
+		//   setIsFav(!isFav)
+		// }
+
+		setIsFav(!isFav);
 	};
 	useEffect(() => {
-       isFav && addToFav({...movie, isFav})
-        // if(fav.some((f => f.isFav === true))){
-        //   setIsFav(true)
-        // }else{
-        //   setIsFav(false)
-        // }
-  }, [isFav]);
+		isFav && addToFav({ ...movie, isFav });
+		// if(fav.some((f => f.isFav === true))){
+		//   setIsFav(true)
+		// }else{
+		//   setIsFav(false)
+		// }
+	}, [isFav]);
 
 	return (
 		<SectionStyled>

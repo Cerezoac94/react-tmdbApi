@@ -39,7 +39,7 @@ const Menu = styled.span`
   align-items: center;
   width: 100%;
   text-align: left;
-  color: #e10000;
+  color: var(--colorRed);
   font-size: 1.8rem;
   margin: 1rem 1rem;
   text-decoration:none;

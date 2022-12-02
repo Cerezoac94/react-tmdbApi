@@ -24,7 +24,7 @@ const SectionStyled = styled.section`
 	h3 {
 		margin: 0 2rem 2rem 0;
 		font-size: 1rem;
-		color: #d9251d;
+		color: var(--colorRed);
 		@media (min-width: 720px) {
 			font-size: 1.3rem;
 		}

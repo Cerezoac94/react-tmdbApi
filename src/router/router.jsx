@@ -16,7 +16,7 @@ import ViewTopRated from "../components/main/moviesByFilter/ViewTopRated"
 import Logout from "../components/main/Logout"
 import ViewGenres from "../components/main/moviesByFilter/ViewGenres"
 import ViewFavorites from "../components/main/favorites/ViewFavorites"
-import HeroContainer from "../components/main/home/HeroContainer"
+import Genres from "../components/main/moviesByFilter/Genres"
 
 const router = createBrowserRouter(
     [
@@ -76,7 +76,7 @@ const router = createBrowserRouter(
 
                 {
                     path: "/genres",
-                    element: <HeroContainer/>
+                    element: <Genres/>
                 },
 
                 {

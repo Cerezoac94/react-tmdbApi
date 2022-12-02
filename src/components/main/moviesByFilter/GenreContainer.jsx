@@ -1,4 +1,3 @@
-import React from 'react'
 
 const genreContainer = [
   { id: 28,

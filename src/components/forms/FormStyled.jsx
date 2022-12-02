@@ -25,7 +25,7 @@ const FormContainer = styled.div`
     }
     button{
     width: 100%;
-    background-color: #D9251D;
+    background-color: var(--colorRed);
     border: none;
     color: white;
     padding: .6rem .8rem;

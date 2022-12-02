@@ -1,23 +1,21 @@
-import React from 'react'
-import styled from 'styled-components'
-import NewestHomeContainer from './NewestHomeContainer'
-import PopularHomeContainer from './PopularHomeContainer'
-import TopRatedHomeContainer from './TopRatedHomeContainer'
+import React from "react";
+import styled from "styled-components";
+import HeroContainer from "./HeroContainer";
+import NewestHomeContainer from "./NewestHomeContainer";
+import PopularHomeContainer from "./PopularHomeContainer";
+import TopRatedHomeContainer from "./TopRatedHomeContainer";
 
-const Container = styled.div`
-
-`
-
+const Container = styled.div``;
 
 const Home = () => {
-  
-  return (
-    <Container>
-    <PopularHomeContainer/>
-    <NewestHomeContainer/>
-    <TopRatedHomeContainer/>
-    </Container>
-  )
-}
+	return (
+		<Container>
+			<HeroContainer />
+			<PopularHomeContainer />
+			<NewestHomeContainer />
+			<TopRatedHomeContainer />
+		</Container>
+	);
+};
 
-export default Home
+export default Home;
