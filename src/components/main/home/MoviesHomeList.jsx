@@ -34,24 +34,61 @@ const SectionStyled = styled.section`
 		width: 50%;
 		padding: 1rem;
 		background-color: transparent;
-		
+		position: relative;
 		@media (min-width: 720px) {
 			width: 33.3%;
 		}
 	}
 	.first {
 		display: none;
+		position: relative;
 		@media (min-width: 720px) {
 			display: block;
 			width: calc(100% - 33.3%);
-			padding: 0.5rem;
+			padding: 1rem;
 		}
 	}
 
-	.poster:hover, .first:hover{
+
+	.poster:hover,
+	.first:hover {
 		@media (min-width: 720px) {
-		transform: scale(1.05);
+			transform: scale(1.05);
 		}
+	}
+`;
+
+const LinkStyled = styled(Link)`
+	text-decoration: none;
+	color: var(--colorWhite);
+	
+	h3:hover {
+		@media (min-width: 720px) {
+			transform: scale(1.05);
+		}
+	}
+	figure{
+		
+		width: 100%;
+		height: 100%;
+		position:relative;
+	}
+
+	figure::after{
+		content: "";
+		height: 100%;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		position: absolute;
+		border-radius: 0.5rem;
+		background-image:linear-gradient(to bottom,rgb(50,50,50, .1),rgb(0,0,0)); 
+	}
+
+	figure:hover:after{
+		@media (min-width: 720px) {
+		display: none;
+	}
 	}
 
 
@@ -60,24 +97,37 @@ const SectionStyled = styled.section`
 		height: 100%;
 		margin-right: 1rem;
 		border-radius: 0.5rem;
+		position: relative;
 		@media (min-width: 720px) {
 			width: 100%;
 		}
 	}
-`;
 
-const LinkStyled = styled(Link)`
-	text-decoration: none;
-	color: var(--colorWhite);
-
-	h3:hover {
+	.info {
+		position: absolute;
+		bottom: 2.5rem;
+		left: 1.5rem;
 		@media (min-width: 720px) {
-		transform: scale(1.05);
+		bottom: 5rem;
+		left: 2rem;
+		}
+	}
+	h2 {
+		@media (min-width: 720px) {
+		font-size: 1.5rem;
+	}
+	}
+	label {
+		color: var(--colorGray);
+		font-size: .8rem;
+		@media (min-width: 720px) {
+		font-size: 1.5rem;
+		
 		}
 	}
 `;
 
-const TitleSection = styled.div`
+const HeaderSection = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -87,7 +137,7 @@ const TitleSection = styled.div`
 const MoviesHomeList = (props) => {
 	return (
 		<SectionStyled>
-			<TitleSection>
+			<HeaderSection>
 				<div>
 					{props.name != "Top-Rated" ? (
 						<h1>{props.name}</h1>
@@ -100,11 +150,12 @@ const MoviesHomeList = (props) => {
 						<h3>View More</h3>
 					</LinkStyled>
 				</div>
-			</TitleSection>
+			</HeaderSection>
 			{props.movies.map((movie, key) => {
 				return (
 					<div className={key === 0 ? "first" : "poster"} key={key}>
 						<LinkStyled to={`/movie/${movie.id}`}>
+						<figure>
 							<img
 								src={`https://image.tmdb.org/t/p/${
 									key != 0
@@ -113,7 +164,8 @@ const MoviesHomeList = (props) => {
 								}`}
 								alt={movie.title}
 							/>
-							<section>
+							</figure>
+							<section className="info">
 								<h2>{movie.title}</h2>
 								<div>
 									<label>
