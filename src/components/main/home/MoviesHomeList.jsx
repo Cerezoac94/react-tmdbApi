@@ -53,7 +53,7 @@ const SectionStyled = styled.section`
 	.poster:hover,
 	.first:hover {
 		@media (min-width: 720px) {
-			transform: scale(1.05);
+			transform: scale(1.03);
 		}
 	}
 `;
@@ -104,25 +104,36 @@ const LinkStyled = styled(Link)`
 	}
 
 	.info {
+		width: 90%;
 		position: absolute;
 		bottom: 2.5rem;
 		left: 1.5rem;
+		
 		@media (min-width: 720px) {
 		bottom: 5rem;
 		left: 2rem;
 		}
+
+		div{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 	h2 {
-		@media (min-width: 720px) {
 		font-size: 1.5rem;
+		@media (min-width: 720px) {
+		font-size: 2.5rem;
+	}
+	@media (min-width: 950px) {
+		font-size: 3.5rem;
 	}
 	}
 	label {
 		color: var(--colorGray);
-		font-size: .8rem;
+		font-size: 1rem;
 		@media (min-width: 720px) {
-		font-size: 1.5rem;
-		
+		font-size: 1.7rem;
 		}
 	}
 `;

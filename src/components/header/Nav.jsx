@@ -45,7 +45,7 @@ const Nav = ({ click, clicked }) => {
       <LinkStyled to="/movies/popular">Popular</LinkStyled>
       <LinkStyled to="/movies/Newest">Newest</LinkStyled>
       <LinkStyled to="/movies/top-rated">Top Rated</LinkStyled>
-      <LinkStyled to="/genders">Genres</LinkStyled> {/*Esto mostrara una lista de generos, posterior a esto, el genero seleccionado mostrará la vista de peliculas de ese genero, similar a ver un detalle de pelicula */}
+      <LinkStyled to="/genres">Genres</LinkStyled> {/*Esto mostrara una lista de generos, posterior a esto, el genero seleccionado mostrará la vista de peliculas de ese genero, similar a ver un detalle de pelicula */}
       {user && <LinkStyled to="/movies/favorite">Favorites</LinkStyled>}
       
       
