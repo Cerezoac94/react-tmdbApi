@@ -45,12 +45,7 @@ const LinkStyled = styled(Link)`
   }
 `;
 
-// const GenreContainer = styled.div`
-// 	width: 20rem;
-// 	display: inline-block;
-// 	height: 10rem;
-// 	border: 1px solid var(--colorWhite);
-// `;
+
 
 const Genres = () => {
 	console.log(genreContainer);

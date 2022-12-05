@@ -32,6 +32,7 @@ const LinkStyled = styled(Link)`
   @media (min-width: 720px) {
     width: initial;
     margin: 0 10px;
+    font-size: 2rem;
   }
   :hover{
     color: #ffffff;

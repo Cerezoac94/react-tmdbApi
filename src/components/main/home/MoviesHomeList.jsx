@@ -26,7 +26,7 @@ const SectionStyled = styled.section`
 		font-size: 1rem;
 		color: var(--colorRed);
 		@media (min-width: 720px) {
-			font-size: 1.3rem;
+			font-size: 1.5rem;
 		}
 	}
 

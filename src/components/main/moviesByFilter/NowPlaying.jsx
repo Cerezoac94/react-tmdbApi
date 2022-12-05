@@ -31,7 +31,7 @@ const SectionStyled = styled.section`
 			width: 8.5rem;
 		}
 		@media (min-width: 1180px) {
-			width: 30%;
+			width: 35%;
 		}
 	}
 

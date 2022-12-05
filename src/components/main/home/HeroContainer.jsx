@@ -17,7 +17,7 @@ const HeroContainer = () => {
       }
 
     useEffect(() => {
-      axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${apikey}&language=en-US&region=MX&sort_by=popularity.Asc&include_adult=false&include_video=false&page=1&release_date.gte=2022-11-25&release_date.lte=2022-12-01&watch_region=MX`)
+      axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${apikey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&release_date.gte=2022-11-25&release_date.lte=2022-12-02&watch_region=MX`)
       .then((res) => setHeroMovie(res.data.results.sort(random).filter(ifImg).slice(0,9)))
     }, [])
 

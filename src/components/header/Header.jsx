@@ -17,6 +17,7 @@ const HeaderStyled = styled.header`
     display: flex;
     align-items: center;
   }
+
 `;
 
 const Menu = styled.span`
@@ -41,9 +42,11 @@ const Menu = styled.span`
   text-align: left;
   color: var(--colorRed);
   font-size: 1.8rem;
-  margin: 1rem 1rem;
+  margin: .5rem .5rem;
   text-decoration:none;
-
+  @media (min-width: 720px) {
+    margin: 1rem 1rem;
+  }
   img{ width: 12rem;
     @media (min-width: 720px) {
     width: 17rem;
@@ -64,7 +67,7 @@ const Header = () => {
       <LinkStyled to="/"><img src="../../../public/Logo.png" alt="Logo" /></LinkStyled> 
       </div>
       <Nav click={click} clicked={clicked}/>
-      {!user && <div>
+      {!user && <div className="buttons">
       <LinkStyled to="/login"><Button name="Log In"/></LinkStyled>
       <LinkStyled to="/signup"><Button name="Sign Up"  primary="true"/></LinkStyled>
       </div>}

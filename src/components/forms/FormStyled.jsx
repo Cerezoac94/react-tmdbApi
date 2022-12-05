@@ -34,7 +34,7 @@ const FormContainer = styled.div`
     display: inline-block;
     font-size: 1.3rem;
     border-radius: .6rem;
-    margin: 0 .4rem;
+    margin: 2rem .4rem 0;
     }
   }
 `;
