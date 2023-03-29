@@ -8,7 +8,7 @@ const PopularContainer = () => {
   
   useEffect(() => {
     axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apikey}&language=en-US&page=1`)
-    .then((res) => setPopular(res.data.results))
+    .then((res) => setPopular(res?.data?.results))
   }, [])
   
   return (

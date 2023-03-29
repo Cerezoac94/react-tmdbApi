@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "../elements/Button";
 import { userContext } from "../../Context/UserContext";
 import Nav from "./Nav";
+import logo from "../../assets/Logo.png"
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -64,7 +65,7 @@ const Header = () => {
     <HeaderStyled>
       <div>
       <Menu onClick={clicked}><ion-icon name={click ? 'close':'menu'}></ion-icon></Menu>
-      <LinkStyled to="/"><img src="../../../public/Logo.png" alt="Logo" /></LinkStyled> 
+      <LinkStyled to="/"><img src={logo} alt="Logo" /></LinkStyled> 
       </div>
       <Nav click={click} clicked={clicked}/>
       {!user && <div className="buttons">

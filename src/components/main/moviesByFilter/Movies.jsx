@@ -125,7 +125,7 @@ const Movies = ({ movie }) => {
         <h2>{movie.title}</h2>
         <div>
         <label><ion-icon name="star-half-outline"></ion-icon>{movie.vote_average * 10}</label>
-        <label><ion-icon name="calendar-clear-outline"></ion-icon>{movie.release_date.slice(0, 4)}</label>
+        <label><ion-icon name="calendar-clear-outline"></ion-icon>{movie.release_date?.slice(0, 4)}</label>
         </div>
 
         <h4>OVERVIEW</h4>
